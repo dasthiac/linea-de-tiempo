@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Línea de Tiempo: Evolución de la Computación y del Software</title>
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Times New Roman", serif;
+      background: linear-gradient(to right, #ffffff, #c8dcf0);
+      color: #333;
+      padding: 20px;
+    }
+    header, footer {
+      background-color: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+    header h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    header p, footer p {
+      font-size: 16px;
+    }
+    footer p {
+      font-size: 12px;
+    }
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+    /* Línea vertical central */
+    .timeline::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      background-color: #003366;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    /* Contenedor para cada evento */
+    .timeline-container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    /* Lado izquierdo */
+    .timeline-container.left {
+      left: 0;
+    }
+    /* Lado derecho */
+    .timeline-container.right {
+      left: 50%;
+    }
+    /* Flechas de cada contenedor */
+    .timeline-container.left::before {
+      content: " ";
+      position: absolute;
+      top: 15px;
+      right: -15px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent transparent transparent #fff;
+    }
+    .timeline-container.right::before {
+      content: " ";
+      position: absolute;
+      top: 15px;
+      left: -15px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent #fff transparent transparent;
+    }
+    .timeline-container .content {
+      padding: 20px;
+      background-color: #f9f9f9;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .timeline-container .content h2 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    .timeline-container .content p {
+      font-size: 14px;
+    }
+    /* Colores vivos para cada evento */
+    .event-red         { border-left: 5px solid #FF0000; }
+    .event-green       { border-left: 5px solid #00FF00; }
+    .event-blue        { border-left: 5px solid #0000FF; }
+    .event-orange      { border-left: 5px solid #FFA500; }
+    .event-purple      { border-left: 5px solid #9932CC; }
+    .event-teal        { border-left: 5px solid #008080; }
+    .event-magenta     { border-left: 5px solid #FF00FF; }
+    .event-gold        { border-left: 5px solid #FFD700; }
+    .event-cyan        { border-left: 5px solid #00FFFF; }
+    .event-pink        { border-left: 5px solid #FF69B4; }
+    .event-celeste     { border-left: 5px solid #87CEFA; }
+    .event-lawn        { border-left: 5px solid #7CFC00; }
+    .event-orangered   { border-left: 5px solid #FF4500; }
+    .event-royal       { border-left: 5px solid #4169E1; }
+    .event-deeppink    { border-left: 5px solid #FF1493; }
+    .event-deepsky     { border-left: 5px solid #00BFFF; }
+    
+    @media screen and (max-width: 600px) {
+      .timeline::after {
+        left: 31px;
+      }
+      .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .timeline-container.right {
+        left: 0%;
+      }
+      .timeline-container.left::before,
+      .timeline-container.right::before {
+        left: 60px;
+        border: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Línea de Tiempo: Evolución de la Computación y del Software</h1>
+    <p>Clase de Lógica y Programación - Ingeniería Informática</p>
+  </header>
+  
+  <div class="timeline">
+    <!-- Evento 1 -->
+    <div class="timeline-container left event-red">
+      <div class="content">
+        <h2>1617: Neper</h2>
+        <p>Giovanni Neper inventa una tabla pitagórica de columnas móviles para facilitar multiplicaciones y raíces cuadradas y cúbicas.</p>
+      </div>
+    </div>
+    <!-- Evento 2 -->
+    <div class="timeline-container right event-green">
+      <div class="content">
+        <h2>1623-1662: Pascal</h2>
+        <p>Blaise Pascal inventa la Pascalina, la primera máquina de cálculo mecánica.</p>
+      </div>
+    </div>
+    <!-- Evento 3 -->
+    <div class="timeline-container left event-blue">
+      <div class="content">
+        <h2>1646-1716: Leibniz</h2>
+        <p>Gottfried Wilhelm Leibniz diseña una máquina calculadora y desarrolla el sistema binario.</p>
+      </div>
+    </div>
+    <!-- Evento 4 -->
+    <div class="timeline-container right event-orange">
+      <div class="content">
+        <h2>1804: Jacquard</h2>
+        <p>Joseph-Marie Jacquard desarrolla la tarjeta perforada para automatizar telares.</p>
+      </div>
+    </div>
+    <!-- Evento 5 -->
+    <div class="timeline-container left event-purple">
+      <div class="content">
+        <h2>1887: Boullé</h2>
+        <p>León Boullé diseña la primera máquina capaz de multiplicar directamente.</p>
+      </div>
+    </div>
+    <!-- Evento 6 -->
+    <div class="timeline-container right event-teal">
+      <div class="content">
+        <h2>1889: Hollerith</h2>
+        <p>Herman Hollerith patenta su máquina tabuladora, utilizada en el censo de EE.UU. de 1890.</p>
+      </div>
+    </div>
+    <!-- Evento 7 -->
+    <div class="timeline-container left event-magenta">
+      <div class="content">
+        <h2>1943: Von Neumann</h2>
+        <p>John von Neumann desarrolla la arquitectura de computadoras moderna con el EDVAC.</p>
+      </div>
+    </div>
+    <!-- Evento 8 -->
+    <div class="timeline-container right event-gold">
+      <div class="content">
+        <h2>1944: Mark I</h2>
+        <p>Se crea la Mark I, una de las primeras computadoras electromecánicas.</p>
+      </div>
+    </div>
+    <!-- Evento 9 -->
+    <div class="timeline-container left event-cyan">
+      <div class="content">
+        <h2>1946: ENIAC</h2>
+        <p>Surge la ENIAC, considerada la primera computadora electrónica de propósito general.</p>
+      </div>
+    </div>
+    <!-- Evento 10 -->
+    <div class="timeline-container right event-pink">
+      <div class="content">
+        <h2>1953: IBM 650</h2>
+        <p>IBM presenta el sistema IBM 650, uno de los primeros procesadores comerciales exitosos.</p>
+      </div>
+    </div>
+    <!-- Evento 11 -->
+    <div class="timeline-container left event-celeste">
+      <div class="content">
+        <h2>1958: IBM en UNAM</h2>
+        <p>Se instala la primera computadora en México, la IBM 650 en la UNAM.</p>
+      </div>
+    </div>
+    <!-- Evento 12 -->
+    <div class="timeline-container right event-lawn">
+      <div class="content">
+        <h2>1960: Evolución del Software</h2>
+        <p>Se comienza a utilizar el término "evolución del software"; aparecen la multiprogramación y sistemas multiusuario.</p>
+      </div>
+    </div>
+    <!-- Evento 13 -->
+    <div class="timeline-container left event-orangered">
+      <div class="content">
+        <h2>Finales 60-70: Casas del Software</h2>
+        <p>Se establecen las "casas del software" y se comercializa el software como producto.</p>
+      </div>
+    </div>
+    <!-- Evento 14 -->
+    <div class="timeline-container right event-royal">
+      <div class="content">
+        <h2>Mediados 70-80: Sistemas Distribuidos</h2>
+        <p>Surgen redes de área local, sistemas distribuidos y se populariza el uso de microprocesadores.</p>
+      </div>
+    </div>
+    <!-- Evento 15 -->
+    <div class="timeline-container left event-deeppink">
+      <div class="content">
+        <h2>1991: CRAY en UNAM</h2>
+        <p>Se instala la primera supercomputadora en América Latina, la CRAY Y-MP/432 en la UNAM.</p>
+      </div>
+    </div>
+    <!-- Evento 16 -->
+    <div class="timeline-container right event-deepsky">
+      <div class="content">
+        <h2>Década 90+: Expansión del Software</h2>
+        <p>Expansión en redes globales, auge de sistemas operativos sofisticados y tecnologías orientadas a objetos.</p>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <p>Unipaz - Año Académico 2025</p>
+  </footer>
+  
+  <!-- Opcional: agregar alguna animación o interacción con JavaScript -->
+  <script>
+    // Ejemplo simple de animación al hacer scroll (fade-in)
+    const containers = document.querySelectorAll('.timeline-container');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+    containers.forEach(container => observer.observe(container));
+  </script>
+</body>
+</html>
